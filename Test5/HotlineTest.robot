@@ -9,16 +9,16 @@ ${BROWSER}      chrome
 ${TEXT}
 
 *** Test Cases ***
-Find iPhone 7 on Hotline
+Finding iPhone 7 on Hotline
    Input Text       id = searchbox    iPhone 7
    Click Button     id = doSearch
+Finding search results
    Wait Until Page Contains Element     xpath = //p[@data-result-title]
-   ${TEXT}         Get Text  xpath = //p[@data-result-title]
+   ${TEXT}  Get Text  xpath = //p[@data-result-title]
    Log to console     ${TEXT}
+Go to the first link
    Wait Until Page Contains Element     xpath = //ul[@class='products-list cell-list']/li[1]/div[@class='item-info']/div[@class='info-description']/p/a
    Click Element    xpath = //ul[@class='products-list cell-list']/li[1]/div[@class='item-info']/div[@class='info-description']/p/a
-
-
 
 *** Keywords ***
 Go to homepage
