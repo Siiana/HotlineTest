@@ -12,7 +12,7 @@ ${TEXT}
 Finding iPhone 7 on Hotline
    Input Text       id = searchbox    iPhone 7
    Click Button     id = doSearch
-Finding search results
+Number of search results
    Wait Until Page Contains Element     xpath = //p[@data-result-title]
    ${TEXT}  Get Text  xpath = //p[@data-result-title]
    Log to console     ${TEXT}
